@@ -35,3 +35,4 @@
 /synth.log
 /synth.v
 .*.swp
+scripts/vivado/make_table_txt.log
