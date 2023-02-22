@@ -1,5 +1,5 @@
 
-VIVADO_BASE = /opt/Xilinx/Vivado/2018.2
+VIVADO_BASE = /tools/Xilinx/Vivado/2022.2
 VIVADO = $(VIVADO_BASE)/bin/vivado
 XVLOG = $(VIVADO_BASE)/bin/xvlog
 XELAB = $(VIVADO_BASE)/bin/xelab
@@ -58,6 +58,42 @@ table.txt: tab_small_xcku_2/results.txt  tab_small_xcku_3/results.txt
 table.txt: tab_small_xcvu_2/results.txt  tab_small_xcvu_3/results.txt
 table.txt: tab_small_xckup_2/results.txt tab_small_xckup_3/results.txt
 table.txt: tab_small_xcvup_2/results.txt tab_small_xcvup_3/results.txt
+
+table.txt: tab_small_xc7k_1/results.txt  
+table.txt: tab_small_xc7v_1/results.txt  
+table.txt: tab_small_xcku_1/results.txt  
+table.txt: tab_small_xcvu_1/results.txt  
+table.txt: tab_small_xckup_1/results.txt 
+table.txt: tab_small_xcvup_1/results.txt 
+
+table.txt: tab_large_xc7k_2/results.txt  tab_large_xc7k_3/results.txt
+table.txt: tab_large_xc7v_2/results.txt  tab_large_xc7v_3/results.txt
+table.txt: tab_large_xcku_2/results.txt  tab_large_xcku_3/results.txt
+table.txt: tab_large_xcvu_2/results.txt  tab_large_xcvu_3/results.txt
+table.txt: tab_large_xckup_2/results.txt tab_large_xckup_3/results.txt
+table.txt: tab_large_xcvup_2/results.txt tab_large_xcvup_3/results.txt
+
+table.txt: tab_large_xc7k_1/results.txt  
+table.txt: tab_large_xc7v_1/results.txt  
+table.txt: tab_large_xcku_1/results.txt  
+table.txt: tab_large_xcvu_1/results.txt  
+table.txt: tab_large_xckup_1/results.txt 
+table.txt: tab_large_xcvup_1/results.txt 
+
+table.txt: tab_regular_xc7k_2/results.txt  tab_regular_xc7k_3/results.txt
+table.txt: tab_regular_xc7v_2/results.txt  tab_regular_xc7v_3/results.txt
+table.txt: tab_regular_xcku_2/results.txt  tab_regular_xcku_3/results.txt
+table.txt: tab_regular_xcvu_2/results.txt  tab_regular_xcvu_3/results.txt
+table.txt: tab_regular_xckup_2/results.txt tab_regular_xckup_3/results.txt
+table.txt: tab_regular_xcvup_2/results.txt tab_regular_xcvup_3/results.txt
+
+table.txt: tab_regular_xc7k_1/results.txt  
+table.txt: tab_regular_xc7v_1/results.txt  
+table.txt: tab_regular_xcku_1/results.txt  
+table.txt: tab_regular_xcvu_1/results.txt  
+table.txt: tab_regular_xckup_1/results.txt 
+table.txt: tab_regular_xcvup_1/results.txt 
+
 
 table.txt:
 	bash table.sh > table.txt
