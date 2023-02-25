@@ -50,7 +50,8 @@ tab_%/results.txt:
 	bash tabtest.sh $@
 
 area: synth_area_small synth_area_regular synth_area_large
-	-grep -B4 -A10 'Slice LUTs' synth_area_small.log synth_area_regular.log synth_area_large.log
+	-grep -B1 -A9 ^Slack synth_area_small.log synth_area_regular.log synth_area_large.log | tee area.txt
+	-grep -B4 -A10 'Slice LUTs' synth_area_small.log synth_area_regular.log synth_area_large.log | tee -a area.txt
 
 table.txt: tab_small_xc7k_2/results.txt  tab_small_xc7k_3/results.txt
 table.txt: tab_small_xc7v_2/results.txt  tab_small_xc7v_3/results.txt
@@ -61,10 +62,6 @@ table.txt: tab_small_xcvup_2/results.txt tab_small_xcvup_3/results.txt
 
 table.txt: tab_small_xc7k_1/results.txt  
 table.txt: tab_small_xc7v_1/results.txt  
-table.txt: tab_small_xcku_1/results.txt  
-table.txt: tab_small_xcvu_1/results.txt  
-table.txt: tab_small_xckup_1/results.txt 
-table.txt: tab_small_xcvup_1/results.txt 
 
 table.txt: tab_large_xc7k_2/results.txt  tab_large_xc7k_3/results.txt
 table.txt: tab_large_xc7v_2/results.txt  tab_large_xc7v_3/results.txt
@@ -74,11 +71,7 @@ table.txt: tab_large_xckup_2/results.txt tab_large_xckup_3/results.txt
 table.txt: tab_large_xcvup_2/results.txt tab_large_xcvup_3/results.txt
 
 table.txt: tab_large_xc7k_1/results.txt  
-table.txt: tab_large_xc7v_1/results.txt  
-table.txt: tab_large_xcku_1/results.txt  
-table.txt: tab_large_xcvu_1/results.txt  
-table.txt: tab_large_xckup_1/results.txt 
-table.txt: tab_large_xcvup_1/results.txt 
+table.txt: tab_large_xc7v_1/results.txt 
 
 table.txt: tab_regular_xc7k_2/results.txt  tab_regular_xc7k_3/results.txt
 table.txt: tab_regular_xc7v_2/results.txt  tab_regular_xc7v_3/results.txt
@@ -88,11 +81,7 @@ table.txt: tab_regular_xckup_2/results.txt tab_regular_xckup_3/results.txt
 table.txt: tab_regular_xcvup_2/results.txt tab_regular_xcvup_3/results.txt
 
 table.txt: tab_regular_xc7k_1/results.txt  
-table.txt: tab_regular_xc7v_1/results.txt  
-table.txt: tab_regular_xcku_1/results.txt  
-table.txt: tab_regular_xcvu_1/results.txt  
-table.txt: tab_regular_xckup_1/results.txt 
-table.txt: tab_regular_xcvup_1/results.txt 
+table.txt: tab_regular_xc7v_1/results.txt 
 
 
 table.txt:
