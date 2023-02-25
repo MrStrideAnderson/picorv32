@@ -8,3 +8,5 @@ opt_design -directive ExploreSequentialArea
 
 report_utilization
 report_timing
+
+write_checkpoint -force sync_area_large
